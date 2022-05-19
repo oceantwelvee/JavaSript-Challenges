@@ -32,9 +32,18 @@ function rpsGame(yourChoice) {
     console.log(yourChoice);
     let humanChoice, bothChoice;
     // humanChoice = yourChoice.id;
-    // bothChoice =
+    // bothChoice = numberToChoice(ranToRpsInt());
     // results = decideWinner(humanChoice, bothChoice); //  [0, 1] human lost | bot won
     // message = finalMessage(results); // 'You Won!';
      rpsFrontEnd(yourChoice.id , bothChoice, message);
+}
+
+function ranToRpsInt() {
+    return Math.floor(Math.random() * 3);
+}
+
+function numberToChoice( number ) {
+    return ['rock', 'paper', 'scissors'][number]
+
 }
 
